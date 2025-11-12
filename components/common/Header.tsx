@@ -1,0 +1,133 @@
+/* eslint-disable @next/next/no-img-element */
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import useScrollDirection from "@/hooks/useScrollDirection";
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isPastBanner, setIsPastBanner] = useState(false);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const banner =
+  //       document.querySelector(".banner") || document.querySelector("#banner");
+
+  //     if (!banner) {
+  //       setIsPastBanner(true);
+  //       return;
+  //     }
+
+  //     const bannerHeight = banner.getBoundingClientRect().height;
+  //     setIsPastBanner(window.scrollY > bannerHeight - 100);
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   handleScroll();
+
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+
+  const scrollDirection = useScrollDirection();
+
+  const navLinks = [
+    { href: "/about", label: "About" },
+    { href: "/destination", label: "Destination" },
+    { href: "/itineraries", label: "Itineraries" },
+    { href: "/gallery", label: "Gallery" },
+    { href: "/contact", label: "Contact" },
+  ];
+
+  return (
+    // <header className=`absolute top-0 left-0 w-full z-50 ${}`>
+    <header
+      className={`fixed top-0 left-0 w-full z-9999 ${
+        scrollDirection === "up"
+          ? "translate-y-0 "
+          : "-translate-y-full bg-black/60"
+      }`}
+    >
+      {/* <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        isPastBanner ? "bg-primary" : "bg-transparent"
+      }`}
+    > */}
+      <div className="max-width">
+        <div className="flex items-center justify-between py-5 px-4">
+          <Link href="/">
+            {/* Desktop Logo */}
+            <img
+              src="/images/logo.png"
+              alt="Logo"
+              className="hidden md:block w-[200px] h-full object-contain py-1"
+            />
+            {/* Mobile Logo */}
+            <img
+              src="/images/mobile-logo.png"
+              alt="Logo"
+              className="block md:hidden w-24 h-full object-contain py-1"
+            />
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center px-6 py-4 border border-white/40 rounded-lg bg:#FFF80 backdrop-blur-[10.949999809265137px]  space-x-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-white transition-colors duration-300 text-base tracking-wide font-semibold"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Mobile Hamburger Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5"
+            aria-label="Toggle menu"
+          >
+            <span
+              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMenuOpen ? "rotate-45 translate-y-2" : ""
+              }`}
+            />
+            <span
+              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMenuOpen ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMenuOpen ? "-rotate-45 -translate-y-2" : ""
+              }`}
+            />
+          </button>
+
+          {/* Mobile Menu */}
+          <div
+            className={`md:hidden fixed inset-0 bg-primary transition-all duration-300 ${
+              isMenuOpen
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
+            }`}
+          >
+            <nav className="flex flex-col items-center justify-center h-full gap-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-white text-2xl font-medium hover:text-secondary transition-colors duration-300"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
