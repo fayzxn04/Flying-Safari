@@ -8,25 +8,26 @@ import useScrollDirection from "@/hooks/useScrollDirection";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPastBanner, setIsPastBanner] = useState(false);
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const banner =
-  //       document.querySelector(".banner") || document.querySelector("#banner");
 
-  //     if (!banner) {
-  //       setIsPastBanner(true);
-  //       return;
-  //     }
+  useEffect(() => {
+    const handleScroll = () => {
+      const banner =
+        document.querySelector(".banner") || document.querySelector("#banner");
 
-  //     const bannerHeight = banner.getBoundingClientRect().height;
-  //     setIsPastBanner(window.scrollY > bannerHeight - 100);
-  //   };
+      if (!banner) {
+        setIsPastBanner(true);
+        return;
+      }
 
-  //   window.addEventListener("scroll", handleScroll);
-  //   handleScroll();
+      const bannerHeight = banner.getBoundingClientRect().height;
+      setIsPastBanner(window.scrollY > bannerHeight - 100);
+    };
 
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollDirection = useScrollDirection();
 
@@ -39,27 +40,19 @@ export default function Header() {
   ];
 
   return (
-    // <header className=`absolute top-0 left-0 w-full z-50 ${}`>
     <header
-      className={`fixed top-0 left-0 w-full z-9999 ${
-        scrollDirection === "up"
-          ? "translate-y-0 "
-          : "-translate-y-full bg-black/60"
-      }`}
-    >
-      {/* <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         isPastBanner ? "bg-primary" : "bg-transparent"
-      }`}
-    > */}
-      <div className="max-width">
+      } ${scrollDirection === "up" ? "translate-y-0" : "-translate-y-full"}`}
+    >
+      <div className="section-container">
         <div className="flex items-center justify-between py-5 px-4">
           <Link href="/">
             {/* Desktop Logo */}
             <img
               src="/images/logo.png"
               alt="Logo"
-              className="hidden md:block w-[200px] h-full object-contain py-1"
+              className="hidden md:block w-50 h-25 object-contain py-1"
             />
             {/* Mobile Logo */}
             <img

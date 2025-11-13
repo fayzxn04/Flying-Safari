@@ -9,7 +9,7 @@ interface BannerProps {
 
 export default function Banner({ image, title }: BannerProps) {
   return (
-    <main className="relative w-full h-screen" id="banner">
+    <main className="relative w-full h-[90svh] md:h-screen" id="banner">
       <Image
         src={image}
         alt={"Banner image"}

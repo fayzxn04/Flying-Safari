@@ -1,6 +1,12 @@
 import React from "react";
 import Banner from "../common/Banner";
 import Cards from "./Cards";
+import PopularItineraries from "./PopularItineraries";
+import Gallery from "./Gallery";
+import Blogs from "./Blogs";
+import Benefits from "./Benefits";
+import Overview from "./Overview";
+// import SectionHeading from "@/ui/SectionHeading";
 
 export default function HomeParent() {
   return (
@@ -17,8 +23,17 @@ export default function HomeParent() {
       />
       <div className="main-container mt-4">
         <Cards />
-        <Cards />
-        <Cards />
+        <Overview />
+        <PopularItineraries
+          title="Popular Itineraries"
+          subtitle="Safari Itineraries Curated just for you"
+        />
+        <Benefits />
+        <Gallery />
+        <Blogs
+          title="BLOGS & JOURNALS"
+          subtitle="Safari Stories & Travel Insights"
+        />
       </div>
     </div>
   );

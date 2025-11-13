@@ -35,6 +35,7 @@ Note: This project uses webpack explicitly (`--webpack` flag) instead of the def
 ### Component Organization
 
 Components are organized by feature and type:
+
 - `components/common/`: Shared components used across features (e.g., Banner)
 - `components/home/`: Home-specific components
 - `components/about/`: About-specific components
@@ -48,13 +49,14 @@ Each feature typically has a parent component (e.g., `HomeParent.tsx`) that orch
   - `--color-primary: #48503b` (olive green)
   - `--color-secondary: #d9a551` (gold)
 - **Global Classes**:
-  - `.max-width`: Responsive container with max-width of 1440px
+  - `.section-container`: Responsive container with section-container of 1440px
   - `.main-container`: Vertical spacing utility
 - **Typography**: Uses Pacifico font (Google Fonts) as the display font, loaded in root layout
 
 ### Path Aliases
 
 TypeScript is configured with `@/*` alias pointing to the root directory for cleaner imports:
+
 ```typescript
 import HomeParent from "@/components/home/HomeParent";
 ```

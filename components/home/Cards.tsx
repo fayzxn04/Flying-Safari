@@ -59,7 +59,7 @@ const destinations: Destination[] = [
 
 export default function Cards() {
   return (
-    <section className="max-width py-16">
+    <section className="section-container py-16">
       <div className="grid lg:grid-cols-[2fr_1fr] gap-8 items-start">
         {/* Left side */}
         <div className="grid md:grid-cols-3 grid-cols-2 gap-4 lg:order-1 order-2 max-md:px-2">
