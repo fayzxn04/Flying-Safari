@@ -29,6 +29,22 @@
     @apply text-5xl max-md:text-3xl capitalize text-primary opacity-[0.74] font-light;
   }
 
+  .blog-content {
+    @apply -mt-16 mx-4 mb-4 bg-card-background shadow-lg p-5 lg:p-6 transition-all duration-300;
+  }
+
+  .blog-title {
+    @apply text-sm lg:text-sm font-light text-dark-grey uppercase tracking-wide mb-2 transition-colors duration-300;
+  }
+
+  .blog-date {
+    @apply absolute top-4 left-3 border border-white/40 backdrop-blur-[10.9px] rounded-lg px-2 py-4 text-center min-w-[50px] transition-colors duration-300 group-hover:bg-primary group-hover:border-primary;
+  }
+
+  .blog-desc {
+    @apply text-base lg:text-lg font-light text-black leading-snug transition-colors duration-300 group-hover:text-white;
+  }
+
   .scrollbar-hide {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */

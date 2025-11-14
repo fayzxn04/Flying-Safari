@@ -76,20 +76,14 @@ export default function Blogs({ title, subtitle }: BlogProps) {
                   className="w-full lg:h-[460px] h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 {/* Date */}
-                <div className="absolute top-4 left-3 border border-white/40 bg:#FFF80 backdrop-blur-[10.9px] rounded-lg px-2 py-4 text-center min-w-[50px] transition-colors duration-300 group-hover:bg-primary group-hover:border-primary">
-                  <p className="text-xs font-semibold text-white uppercase">
-                    AUG
-                  </p>
-                  <p className="text-lg text-white leading-none mt-1">26</p>
+                <div className="blog-date bg:#FFF80 text-lg text-white">
+                  <p className="font-light uppercase">AUG</p>
+                  <p className="leading-none mt-1">26</p>
                 </div>
                 {/* Content */}
-                <div className=" relative -mt-16 mx-4 mb-4 bg-card-background shadow-lg p-5 lg:p-6 transition-all duration-300 group-hover:bg-primary group-hover:-mt-40">
-                  {/* relative -mt-16 mx-4 bg-card-background rounded-lg shadow-lg p-5 lg:p-6 
-                  transition-all duration-300 group-hover:-mt-20 */}
-                  <p className="text-sm lg:text-sm font-light text-dark-grey uppercase tracking-wide mb-2 transition-colors duration-300 group-hover:text-white">
-                    ANIMALS
-                  </p>
-                  <h3 className="text-base lg:text-lg font-light text-black leading-snug transition-colors duration-300 group-hover:text-white">
+                <div className=" relative blog-content group-hover:bg-primary group-hover:-mt-40">
+                  <p className="blog-title group-hover:text-white">ANIMALS</p>
+                  <h3 className="blog-desc">
                     Dung Architects: The Unsung Engineers of the Serengeti (And
                     why they matter to your safari)
                   </h3>

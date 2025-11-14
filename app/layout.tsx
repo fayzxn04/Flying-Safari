@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Pacifico } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
+import Footeru from "@/components/common/Footeru";
 
 const pacifico = Pacifico({
   variable: "--font-pacifico",
@@ -24,6 +26,8 @@ export default function RootLayout({
       <body className={`${pacifico.variable} antialiased`}>
         <Header />
         {children}
+        <Footeru />
+        <Footer />
       </body>
     </html>
   );

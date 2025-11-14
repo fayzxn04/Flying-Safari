@@ -59,5 +59,3 @@ export default function Overview() {
     </div>
   );
 }
-
-// ${index === 0 ? "lg:ml-8" : "ml-0"}
