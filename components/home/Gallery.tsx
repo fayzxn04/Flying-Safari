@@ -1,31 +1,3 @@
-// "use client";
-// import Button from "@/components/common/Button";
-
-// const IMAGES = [
-//   "/images/gallery-1.png",
-//   "/images/gallery-2.png",
-//   "/images/gallery-3.png",
-//   "/images/gallery-4.png",
-//   "/images/gallery-5.png",
-// ];
-
-// export default function Gallery() {
-//   return (
-//     <>
-//       <div className="flex flex-col justify-center items-center text-center py-12">
-//         <p className="small-heading">Gallery</p>
-//         <h2 className="big-heading text-black lg:max-w-[55%] max-w-[80%] mt-3">
-//           A selection of Images of Our Beautiful Safari Experiences
-//         </h2>
-//       </div>
-
-//       <div className="mt-6 flex justify-center">
-//         <Button />
-//       </div>
-//     </>
-//   );
-// }
-
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
