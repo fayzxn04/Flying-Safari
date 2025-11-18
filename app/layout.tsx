@@ -3,6 +3,7 @@ import { Pacifico } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
+import { ReactQueryProvider } from "@/components/provider/ReactQueryWrapper";
 
 const pacifico = Pacifico({
   variable: "--font-pacifico",
@@ -24,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${pacifico.variable} antialiased`}>
         <Header />
-        {children}
+        <ReactQueryProvider>{children}</ReactQueryProvider>
         <Footer />
       </body>
     </html>

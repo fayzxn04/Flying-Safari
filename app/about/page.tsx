@@ -1,4 +1,5 @@
 import Experience from "@/components/about/Experience";
+import Story from "@/components/about/Story";
 import Values from "@/components/about/Values";
 import Banner from "@/components/common/Banner";
 import React from "react";
@@ -17,6 +18,7 @@ export default function page() {
         }
       />
       <div className="main-container mt-4">
+        <Story />
         <Values />
         <Experience />
       </div>

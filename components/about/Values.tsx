@@ -27,7 +27,7 @@ export default function Values() {
           <div key={index} className="text-center">
             <h3 className="text-4xl md:text-8xl font-semibold  mb-2 md:mb-4">
               {value.end !== undefined ? (
-                <CountUp end={value.end} suffix={value.suffix} duration={4} />
+                <CountUp end={value.end} suffix={value.suffix} duration={5} />
               ) : (
                 value.title
               )}

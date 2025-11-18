@@ -1,31 +1,43 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 
-const experienceData = [
-  {
-    image: "/images/experience-1.png",
-    title: "Seamless Travel",
-    subtitle: "Book your flight and explore safari ideas in one place.",
-  },
-  {
-    image: "/images/experience-2.png",
-    title: "Curated Itineraries",
-    subtitle: "Expertly designed journeys to spark your imagination.",
-  },
-  {
-    image: "/images/experience-3.png",
-    title: "Trusted Partner",
-    subtitle: "A Dubai-based company with a strong focus on East Africa Safari",
-  },
-  {
-    image: "/images/experience-4.png",
-    title: "Safari at Heart",
-    subtitle:
-      "Our focus is not just on flying, but on the adventure that begins after you land.",
-  },
-];
+import { useQuery } from "@tanstack/react-query";
+import { getExperience } from "@/services/get";
+// import experience from "@/data/experience.json";
+
+// const experienceData = [
+//   {
+//     image: "/images/experience-1.png",
+//     title: "Seamless Travel",
+//     subtitle: "Book your flight and explore safari ideas in one place.",
+//   },
+//   {
+//     image: "/images/experience-2.png",
+//     title: "Curated Itineraries",
+//     subtitle: "Expertly designed journeys to spark your imagination.",
+//   },
+//   {
+//     image: "/images/experience-3.png",
+//     title: "Trusted Partner",
+//     subtitle: "A Dubai-based company with a strong focus on East Africa Safari",
+//   },
+//   {
+//     image: "/images/experience-4.png",
+//     title: "Safari at Heart",
+//     subtitle:
+//       "Our focus is not just on flying, but on the adventure that begins after you land.",
+//   },
+// ];
 
 export default function Experience() {
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["experience"],
+    queryFn: getExperience,
+  });
+
+  if (isLoading) return <div>Loading...</div>;
+  if (isError || !data) return <div>Error loading data</div>;
   return (
     <div className="max-width">
       <div className="flex flex-col justify-center items-center text-center ">
@@ -37,7 +49,7 @@ export default function Experience() {
 
       {/* Cards Grid */}
       <div className="mt-10 grid grid-cols-1 lg:grid-cols-4 gap-4 lg:space-x-4 lg:px-19 max-sm:px-4">
-        {experienceData.map((item, index) => (
+        {data.map((item, index) => (
           <div
             key={index}
             className={`${
