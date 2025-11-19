@@ -30,7 +30,7 @@
   }
 
   .blog-content {
-    @apply -mt-16 mx-4 mb-4 bg-card-background shadow-lg p-5 lg:p-6 transition-all duration-300;
+    @apply lg:-mt-16 -mt-4 mx-4 mb-4 bg-card-background shadow-lg p-5 lg:p-6 transition-all duration-300;
   }
 
   .blog-title {
@@ -52,40 +52,6 @@
 
   .scrollbar-hide::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
-  }
-
-  /* Phone Input Styles */
-  .phone-input-container {
-    @apply w-full;
-  }
-
-  .phone-input-container .react-tel-input .form-control {
-    @apply w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none pl-14;
-    /* height: auto !important; */
-  }
-
-  .phone-input-container .react-tel-input .flag-dropdown {
-    @apply border-r border-gray-200 rounded-l-md bg-white;
-  }
-
-  .phone-input-container .react-tel-input .selected-flag {
-    @apply px-3 py-3 hover:bg-gray-50 transition-colors;
-  }
-
-  .phone-input-container .react-tel-input .selected-flag .arrow {
-    @apply border-t-gray-500;
-  }
-
-  .phone-input-container .react-tel-input .country-list {
-    @apply rounded-md shadow-lg border border-gray-200 mt-1;
-  }
-
-  .phone-input-container .react-tel-input .country-list .country:hover {
-    @apply bg-gray-50;
-  }
-
-  .phone-input-container .react-tel-input .country-list .country.highlight {
-    @apply bg-gray-50;
   }
 }
 
