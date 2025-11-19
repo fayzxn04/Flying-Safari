@@ -22,12 +22,12 @@ const destinations = [
 ];
 
 const resources = [
-  "About Us",
-  "Itineraries",
-  "Destination",
-  "Gallery",
-  "Blogs",
-  "Contact Us",
+  { name: "About Us", href: "/about" },
+  { name: "Itineraries", href: "/itineraries" },
+  { name: "Destination", href: "/destination" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Blogs", href: "/blogs" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 const contactInfo = [
@@ -143,12 +143,12 @@ export default function Footer() {
               </h3>
               <ul className="space-y-3">
                 {resources.map((resource) => (
-                  <li key={resource}>
+                  <li key={resource.name}>
                     <Link
-                      href="#"
+                      href={resource.href}
                       className="text-white/80 hover:text-white transition-colors text-sm"
                     >
-                      {resource}
+                      {resource.name}
                     </Link>
                   </li>
                 ))}
