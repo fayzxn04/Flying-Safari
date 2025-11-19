@@ -1,4 +1,5 @@
 import Banner from "@/components/common/Banner";
+import Faq from "@/components/contact/Faq";
 import React from "react";
 
 export default function page() {
@@ -14,6 +15,9 @@ export default function page() {
           </>
         }
       />
+      <div className="main-container mt-4">
+        <Faq />
+      </div>
     </div>
   );
 }
