@@ -5,7 +5,7 @@
   --color-secondary: #d9a551;
   --color-dark-grey: #595959;
   --color-card-background: #f8f5f0;
-  --color-background: var(--background);
+  --color-background: (#fdfbf7);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -52,6 +52,40 @@
 
   .scrollbar-hide::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
+  }
+
+  /* Phone Input Styles */
+  .phone-input-container {
+    @apply w-full;
+  }
+
+  .phone-input-container .react-tel-input .form-control {
+    @apply w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none pl-14;
+    /* height: auto !important; */
+  }
+
+  .phone-input-container .react-tel-input .flag-dropdown {
+    @apply border-r border-gray-200 rounded-l-md bg-white;
+  }
+
+  .phone-input-container .react-tel-input .selected-flag {
+    @apply px-3 py-3 hover:bg-gray-50 transition-colors;
+  }
+
+  .phone-input-container .react-tel-input .selected-flag .arrow {
+    @apply border-t-gray-500;
+  }
+
+  .phone-input-container .react-tel-input .country-list {
+    @apply rounded-md shadow-lg border border-gray-200 mt-1;
+  }
+
+  .phone-input-container .react-tel-input .country-list .country:hover {
+    @apply bg-gray-50;
+  }
+
+  .phone-input-container .react-tel-input .country-list .country.highlight {
+    @apply bg-gray-50;
   }
 }
 

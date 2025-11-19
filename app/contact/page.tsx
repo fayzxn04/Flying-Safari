@@ -1,4 +1,5 @@
 import Banner from "@/components/common/Banner";
+import ContactUs from "@/components/contact/ContactUs";
 import Faq from "@/components/contact/Faq";
 import React from "react";
 
@@ -16,6 +17,7 @@ export default function page() {
         }
       />
       <div className="main-container mt-4">
+        <ContactUs />
         <Faq />
       </div>
     </div>
