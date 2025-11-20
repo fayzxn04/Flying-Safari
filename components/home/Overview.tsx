@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import React from "react";
 
 export default function Overview() {
@@ -52,9 +53,11 @@ export default function Overview() {
       </div>
 
       <div>
-        <button className=" w-[140px] bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded transition-colors mt-4 md:text-base text-sm">
-          About us
-        </button>
+        <Link href="/about">
+          <button className=" w-[140px] bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded transition-colors mt-4 md:text-base text-sm cursor-pointer">
+            About us
+          </button>
+        </Link>
       </div>
     </div>
   );
