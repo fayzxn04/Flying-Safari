@@ -8,12 +8,12 @@ interface BlogProps {
 }
 
 const image = [
-  { image: "images/blogs-1.png" },
-  { image: "images/blogs-2.png" },
-  { image: "images/blogs-3.png" },
-  { image: "images/blogs-1.png" },
-  { image: "images/blogs-2.png" },
-  { image: "images/blogs-3.png" },
+  { image: "/images/blogs-1.png" },
+  { image: "/images/blogs-2.png" },
+  { image: "/images/blogs-3.png" },
+  { image: "/images/blogs-1.png" },
+  { image: "/images/blogs-2.png" },
+  { image: "/images/blogs-3.png" },
 ];
 
 export default function Blogs({ title, subtitle }: BlogProps) {
