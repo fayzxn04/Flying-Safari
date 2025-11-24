@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface Destination {
   id: number;
@@ -105,9 +106,11 @@ export default function Cards() {
             </h2>
           </div>
 
-          <button className=" w-[220px] bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded transition-colors">
-            Explore Destinations
-          </button>
+          <Link href="/destination">
+            <button className=" w-[220px] bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded transition-colors">
+              Explore Destinations
+            </button>
+          </Link>
         </div>
       </div>
     </section>
