@@ -1,5 +1,4 @@
 import Banner from "@/components/common/Banner";
-import DaytoDayItinerary from "@/components/itineraries/DaytoDayItinerary";
 import ItinerariesPicture from "@/components/itineraries/ItinerariesPicture";
 import React from "react";
 
@@ -17,7 +16,6 @@ export default function page() {
       />
       <div className="main-container">
         <ItinerariesPicture />
-        <DaytoDayItinerary />
       </div>
     </div>
   );

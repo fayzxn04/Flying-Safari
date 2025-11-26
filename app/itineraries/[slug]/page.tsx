@@ -1,26 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-// import React from "react";
-// import { itinerariesData } from "@/components/itineraries/ItinerariesPicture";
-
-// interface PageProps {
-//   params: {
-//     slug: string;
-//   };
-// }
-
-// export default function Page({ params }: PageProps) {
-//   // const { slug } = params;
-
-//   const itinerary = itinerariesData.find(
-//     (item) => item.id.toString() === params.slug
-//   );
-
-//   if (!itinerary) {
-//     return <div className="text-center py-20">Itinerary Not Found</div>;
-//   }
-
-import React from "react";
-// import { itinerariesData } from "@/components/itineraries/ItinerariesPicture";
 import { itinerariesData } from "@/components/itineraries/data";
 import Banner from "@/components/common/Banner";
 import DaytoDayItinerary from "@/components/itineraries/DaytoDayItinerary";

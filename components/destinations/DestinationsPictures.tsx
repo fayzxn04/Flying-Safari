@@ -2,75 +2,21 @@
 
 import { useState } from "react";
 import Image from "next/image";
-
-const destination = [
-  {
-    image: "/images/blogs-1.png",
-    title: "Serengeti National Park",
-    subtitle:
-      "Where endless plains meet the world's greatest wildlife spectacle, the Great Migration.",
-  },
-  {
-    image: "/images/blogs-2.png",
-    title: "Maasai Mara National Reserve",
-    subtitle:
-      "Where endless plains meet the world's greatest wildlife spectacle, the Great Migration.",
-  },
-  {
-    image: "/images/blogs-3.png",
-    title: "Lake Manyara National Park",
-    subtitle:
-      "Where endless plains meet the world's greatest wildlife spectacle, the Great Migration.",
-  },
-  {
-    image: "/images/blogs-1.png",
-    title: "Serengeti National Park",
-    subtitle:
-      "Where endless plains meet the world's greatest wildlife spectacle, the Great Migration.",
-  },
-  {
-    image: "/images/blogs-2.png",
-    title: "Maasai Mara National Reserve",
-    subtitle:
-      "Where endless plains meet the world's greatest wildlife spectacle, the Great Migration.",
-  },
-  {
-    image: "/images/blogs-3.png",
-    title: "Lake Manyara National Park",
-    subtitle:
-      "Where endless plains meet the world's greatest wildlife spectacle, the Great Migration.",
-  },
-  {
-    image: "/images/blogs-1.png",
-    title: "Serengeti National Park",
-    subtitle:
-      "Where endless plains meet the world's greatest wildlife spectacle, the Great Migration.",
-  },
-  {
-    image: "/images/blogs-2.png",
-    title: "Maasai Mara National Reserve",
-    subtitle:
-      "Where endless plains meet the world's greatest wildlife spectacle, the Great Migration.",
-  },
-  {
-    image: "/images/blogs-3.png",
-    title: "Lake Manyara National Park",
-    subtitle:
-      "Where endless plains meet the world's greatest wildlife spectacle, the Great Migration.",
-  },
-];
+import { destination } from "./destination-data";
+import Link from "next/link";
 
 export default function DestinationsPictures() {
   return (
     <div className="px-4 lg:px-20 py-4 lg:py-15">
       <div className="grid grid-cols-1 lg:grid-cols-3 space-y-3 lg:space-y-0 lg:gap-4 rounded-2xl">
         {destination.map((item, index) => (
-          <DestinationCard
-            key={index}
-            image={item.image}
-            title={item.title}
-            subtitle={item.subtitle}
-          />
+          <Link href={`/destination/${item.bannerdetail.slug}`} key={index}>
+            <DestinationCard
+              image={item.image}
+              title={item.title}
+              subtitle={item.subtitle}
+            />
+          </Link>
         ))}
       </div>
     </div>
