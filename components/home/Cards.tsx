@@ -81,7 +81,7 @@ export default function Cards() {
               {/* Featured Badge */}
               {destination.featured && (
                 <div className="absolute top-0 left-0">
-                  <div className="relative bg-primary px-3 py-2 text-white text-sm font-light rounded-br-2xl">
+                  <div className="relative bg-primary px-3 py-1 text-white text-sm font-light rounded-br-2xl">
                     Featured
                   </div>
                 </div>

@@ -4,7 +4,7 @@ import React from "react";
 
 export default function ContactUs() {
   return (
-    <div className="px-4 lg:px-20 py-4 lg:pt-15 grid lg:grid-cols-2 bg-background">
+    <div className="px-4 lg:px-20 py-4 lg:pt-15 grid md:grid-cols-2 bg-background">
       <div className="max-md:mb-10">
         <p className="uppercase text-secondary md:text-base lg:text-lg text-sm ">
           get in touch

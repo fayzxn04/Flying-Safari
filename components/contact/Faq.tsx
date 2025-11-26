@@ -61,7 +61,7 @@ export default function Faq() {
 
   return (
     <div className="grid lg:grid-cols-2 justify-between px-4 lg:px-20 gap-8 lg:gap-12">
-      <div>
+      <div className="max-lg:flex flex-col justify-center items-center">
         <p className="text-secondary text-lg">FAQ</p>
         <h2 className="mt-3 md:text-4xl lg:text-5xl text-[28px] max-w-[80%]">
           Answers to Your Top Queries

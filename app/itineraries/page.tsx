@@ -1,4 +1,5 @@
 import Banner from "@/components/common/Banner";
+import DaytoDayItinerary from "@/components/itineraries/DaytoDayItinerary";
 import ItinerariesPicture from "@/components/itineraries/ItinerariesPicture";
 import React from "react";
 
@@ -9,13 +10,14 @@ export default function page() {
         image="/images/Banner/itineraries-min.webp"
         title={
           <>
-            <span className="font-pacifico"> Itineraries Crafted&nbsp;</span>
+            <span className="font-pacifico">Itineraries Crafted&nbsp;</span>
             With Care just for you
           </>
         }
       />
       <div className="main-container">
         <ItinerariesPicture />
+        <DaytoDayItinerary />
       </div>
     </div>
   );

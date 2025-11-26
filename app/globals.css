@@ -30,7 +30,7 @@
   }
 
   .blog-content {
-    @apply lg:-mt-16 -mt-4 mx-4 mb-4 bg-card-background shadow-lg p-5 lg:p-6 transition-all duration-300;
+    @apply lg:-mt-16 -mt-4 mx-4 mb-4 bg-card-background  p-5 lg:p-6 transition-all duration-300;
   }
 
   .blog-title {
