@@ -56,7 +56,7 @@ export default function Footer() {
     <>
       <div className="max-width">
         <div className="bg-[url('/images/footer-logo.webp')] bg-cover bg-center bg-no-repeat h-[550px] mt-25 relative">
-          <h2 className="lg:text-[188px] text-5xl uppercase text-white lg:tracking-[7.5px] tracking-wide lg:px-6 text-center absolute lg:-top-10 lg:right-14 -top-2 px-5">
+          <h2 className="lg:text-[188px] text-5xl uppercase text-white lg:tracking-[7.5px] tracking-wide  absolute lg:-top-10 -top-2 max-md:mt-10 md:left-1/2 md:-translate-x-1/2 max-md:px-auto text-center w-full">
             Flying Safari
           </h2>
 
@@ -68,7 +68,7 @@ export default function Footer() {
               </p>
               <form
                 onSubmit={handleSubscribe}
-                className="flex sm:flex-row items-center justify-center gap-4 border  border-white/40  bg:#FFF80 backdrop-blur-[10.9px] rounded-full"
+                className="flex sm:flex-row items-center justify-center gap-4 border  border-white  bg:#FFF80 backdrop-blur-[10.9px] rounded-full"
               >
                 <input
                   type="email"
@@ -76,7 +76,7 @@ export default function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your Email Address"
                   required
-                  className="px-6 py-2 rounded-full w-full sm:w-80 text-white focus:outline-none focus:ring-2 focus:ring-white"
+                  className="px-6 py-2 rounded-full w-full sm:w-80 text-white focus:outline-none "
                 />
                 <button
                   type="submit"
@@ -194,7 +194,7 @@ export default function Footer() {
                 <a
                   href="https://dotsyndicate.com/"
                   target="_blank"
-                  className="font-medium text-secondary max-md:text-primary"
+                  className="font-medium text-secondary max-md:text-secondary"
                 >
                   DotSyndicate
                 </a>
