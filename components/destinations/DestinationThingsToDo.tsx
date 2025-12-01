@@ -101,7 +101,7 @@ export default function DestinationThingsToDo() {
           {thingstodo.map((item, index) => (
             <div
               key={index}
-              className={`w-[330px] h-[332px] lg:w-[368px]  bg-white rounded-3xl p-3 shrink-0 ${
+              className={`w-[330px] h-[332px] lg:w-[368px] bg-white rounded-3xl p-3 shrink-0 ${
                 index % 2 === 0 ? "rotate-3" : "-rotate-3"
               }`}
             >
