@@ -10,6 +10,10 @@ import {
   IconTrekking,
   IconGrill,
 } from "@tabler/icons-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 interface PopularItinerariesProps {
   title: string;
@@ -158,12 +162,45 @@ export default function PopularItineraries({
                 className="bg-card-background rounded-lg overflow-hidden shadow-lg w-[330px] h-96 lg:w-[454px] lg:h-[520px] shrink-0 flex flex-col"
               >
                 <div className="relative h-40 lg:h-60">
-                  <img
-                    src={itinerary.image}
-                    alt={itinerary.title}
-                    className="object-cover w-full h-full"
-                  />
-                  <div className="absolute top-4 left-4 bg-white px-2 py-1 rounded text-sm">
+                  <Swiper
+                    modules={[Pagination]}
+                    pagination={{
+                      clickable: true,
+                      bulletClass: "swiper-pagination-bullet !bg-white/50",
+                      bulletActiveClass:
+                        "swiper-pagination-bullet-active !bg-white",
+                    }}
+                    className="w-full h-full"
+                    autoplay={{
+                      delay: 1000,
+                      disableOnInteraction: false,
+                    }}
+                    // autoplay={{ delay: 1000 }}
+                  >
+                    <SwiperSlide>
+                      <img
+                        src={itinerary.image}
+                        alt={itinerary.title}
+                        className="object-cover w-full h-full"
+                      />
+                    </SwiperSlide>
+                    {/* Add more slides here if you have multiple images */}
+                    <SwiperSlide>
+                      <img
+                        src={itinerary.image}
+                        alt={`${itinerary.title} - 2`}
+                        className="object-cover w-full h-full"
+                      />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img
+                        src={itinerary.image}
+                        alt={`${itinerary.title} - 3`}
+                        className="object-cover w-full h-full"
+                      />
+                    </SwiperSlide>
+                  </Swiper>
+                  <div className="absolute top-4 left-4 bg-white px-2 py-1 rounded text-sm z-10">
                     {itinerary.badge}
                   </div>
                 </div>

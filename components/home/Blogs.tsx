@@ -73,7 +73,7 @@ export default function Blogs({ title, subtitle }: BlogProps) {
                 <img
                   src={item.image}
                   alt={`Blog ${index + 1}`}
-                  className="w-full lg:h-[460px] h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full lg:h-[460px] h-[300px] object-cover transition-transform duration-200 "
                 />
                 {/* Date */}
                 <div className="blog-date bg:#FFF80 text-lg text-white">

@@ -30,7 +30,7 @@ export default function DestinationsOverview() {
           <img
             src="/images/destination-individual-picture.png"
             alt="picture"
-            className="lg:size-[450px] size-80 "
+            className="lg:size-[420px] size-80 "
           />
         </div>
         {/* Third Grid */}

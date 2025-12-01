@@ -53,6 +53,19 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
   }
+
+  /* Swiper Pagination Customization */
+  .swiper-pagination {
+    @apply bottom-3!;
+  }
+
+  .swiper-pagination-bullet {
+    @apply w-2! h-2! mx-1! opacity-100! transition-all! duration-300!;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply w-8! rounded-full!;
+  }
 }
 
 /* :root {
