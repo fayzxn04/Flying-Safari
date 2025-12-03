@@ -28,7 +28,7 @@ export default function DestinationsOverview() {
     <section id="overview" className="section-container">
       {/* ----------- TABS START ----------- */}
       <div className="flex justify-center pt-16 lg:pb-14 pb-6 ">
-        <div className="flex gap-6 overflow-x-scroll md:overflow-visible px-3 rounded-full bg-white">
+        <div className="flex gap-6 overflow-x-scroll scrollbar-hide md:overflow-visible px-3 rounded-full bg-white">
           {TABS.map((tab) => (
             <button
               key={tab.id}
