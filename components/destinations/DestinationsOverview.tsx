@@ -33,7 +33,7 @@ export default function DestinationsOverview() {
             <button
               key={tab.id}
               onClick={() => goToSection(tab.id)}
-              className={`whitespace-nowrap px-10 py-2 text-sm lg:text-lg uppercase rounded-full transition-all
+              className={`whitespace-nowrap lg:px-10 px-4 py-2 text-sm lg:text-lg uppercase rounded-full transition-all
                 ${
                   activeTab === tab.id
                     ? "bg-primary text-white"
