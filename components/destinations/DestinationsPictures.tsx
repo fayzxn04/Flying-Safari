@@ -40,12 +40,7 @@ function DestinationCard({
       onClick={() => setIsExpanded(!isExpanded)}
     >
       {/* Image */}
-      <Image
-        src={image}
-        alt={title}
-        fill
-        className="object-cover lg:group-hover:scale-105 transition-transform duration-300"
-      />
+      <Image src={image} alt={title} fill className="object-cover " />
 
       {/* Overlay gradient */}
       {/* <div className="absolute inset-0 from-black/70 via-black/20 to-transparent" /> */}

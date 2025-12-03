@@ -11,7 +11,7 @@ import {
   IconGrill,
 } from "@tabler/icons-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -163,7 +163,7 @@ export default function PopularItineraries({
               >
                 <div className="relative h-40 lg:h-60">
                   <Swiper
-                    modules={[Pagination]}
+                    modules={[Pagination, Autoplay]}
                     pagination={{
                       clickable: true,
                       bulletClass: "swiper-pagination-bullet !bg-white/50",

@@ -25,7 +25,7 @@ async function Page({ params }: { params: Promise<{ slug: string }> }) {
         title={itinerary.bannerdetail.bannertitle}
       />
       <div>
-        <ItinerariesOverview />
+        <ItinerariesOverview mainImage={itinerary.image} />
         <Thingstodo />
         <DaytoDayItinerary />
         <PopularItineraries
