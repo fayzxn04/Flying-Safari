@@ -6,7 +6,7 @@ export default function Overview() {
   return (
     <section className="bg-[url('/images/overview-bg.webp')] bg-center bg-no-repeat px-3 lg:px-20 py-4 max-width lg:py-15 flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center text-center items-center md:mb-6">
-        <p className="text-lg md:text-2xl lg:text-[28px] lg:max-w-[65%] text-secondary leading-6 md:leading-8 lg:leading-10">
+        <p className="text-lg md:text-2xl lg:text-[28px] lg:max-w-[65%] text-secondary leading-6 md:leading-8 lg:leading-10 font-[550]">
           In Tanzania, the rhythm of the wild is untouched by time. From the
           roar of lions to the whispers of the savannah winds, the land invites
           you to wander beyond the ordinary and embrace.

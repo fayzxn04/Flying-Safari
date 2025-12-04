@@ -68,12 +68,12 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center px-6 py-4 rounded-lg border  border-white/40  bg:#FFF80 backdrop-blur-[10.9px]  space-x-6">
+            <nav className="hidden md:flex items-center px-6 py-4 rounded-lg border border-white/40 bg:#FFF80 backdrop-blur-[10.9px] space-x-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-white transition-colors duration-300 text-base tracking-wide font-semibold"
+                  className="text-white transition-colors duration-300 text-base  font-bold tracking-[0.08em]"
                 >
                   {link.label}
                 </Link>

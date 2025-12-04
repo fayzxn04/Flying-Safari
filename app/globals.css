@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Optima";
+  src: url("/OPTIMA.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
   --color-primary: #48503b;
   --color-secondary: #d9a551;
@@ -7,7 +15,7 @@
   --color-card-background: #f8f5f0;
   --color-background: (#fdfbf7);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: "Optima", system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
   --font-pacifico: var(--font-pacifico);
 }
@@ -81,5 +89,5 @@
 } */
 
 body {
-  font-family: Arial, var(--font-outfit);
+  font-family: "Optima", Arial, sans-serif;
 }

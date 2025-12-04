@@ -5,12 +5,11 @@ import Banner from "@/components/common/Banner";
 import React from "react";
 
 const data = {
-  image: "/images/Banner/About.webp",
+  image: "/images/Banner/About-min.webp",
   title: (
     <>
-      Embark on <span className="font-pacifico">experiences</span> not just
-      destinations with&nbsp;
-      <span className="font-pacifico">our trips</span>
+      <span className="font-pacifico">Book your seat </span> discover the safari
+      <span className="font-pacifico">beyond the runway</span>
     </>
   ),
 };

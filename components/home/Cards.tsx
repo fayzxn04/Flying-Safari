@@ -24,14 +24,14 @@ export default function Cards() {
 
               {/* Featured Badge */}
               {destination.featured && (
-                <div className="absolute top-0 left-0 bg-primary px-3 py-1 text-white text-sm font-light rounded-br-2xl">
+                <div className="absolute top-0 left-0 bg-primary px-3 py-1 text-white text-sm font-normal rounded-br-2xl">
                   Featured
                 </div>
               )}
 
               {/* Title */}
               <div className="absolute inset-0 flex items-center justify-center p-6">
-                <h3 className="text-white text-center font-light text-sm md:text-2xl leading-tight">
+                <h3 className="text-white text-start font-light text-sm md:text-2xl leading-tight">
                   {destination.name}
                 </h3>
               </div>
@@ -42,7 +42,9 @@ export default function Cards() {
         {/* Right side - Content */}
         <div className="flex flex-col justify-center space-y-10 lg:space-y-20 h-full lg:order-2 order-1 max-md:px-2">
           <div className="space-y-3">
-            <p className="small-heading">POPULAR DESTINATION</p>
+            <p className="small-heading font-[550] tracking-[0.36px]">
+              POPULAR DESTINATION
+            </p>
             <h2 className="big-heading font-normal">
               East Africa Iconic Safari Destinations
             </h2>
@@ -50,7 +52,7 @@ export default function Cards() {
 
           <Link
             href="/destination"
-            className="w-[220px] bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded transition-colors inline-block text-center"
+            className="w-[220px] bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded transition-colors inline-block text-center font-bold tracking-[1.28px]"
           >
             Explore Destinations
           </Link>
