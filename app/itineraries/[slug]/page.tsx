@@ -21,8 +21,10 @@ async function Page({ params }: { params: Promise<{ slug: string }> }) {
   return (
     <div>
       <Banner
-        image={itinerary.bannerdetail.bannerimage}
-        title={itinerary.bannerdetail.bannertitle}
+        data={{
+          image: itinerary.bannerdetail.bannerimage,
+          title: itinerary.bannerdetail.bannertitle,
+        }}
       />
       <div>
         <ItinerariesOverview mainImage={itinerary.image} />

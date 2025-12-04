@@ -22,8 +22,10 @@ async function Page({ params }: { params: Promise<{ slug: string }> }) {
   return (
     <div>
       <Banner
-        image={currentDestination.bannerdetail.bannerimage}
-        title={currentDestination.bannerdetail.bannertitle}
+        data={{
+          image: currentDestination.bannerdetail.bannerimage,
+          title: currentDestination.bannerdetail.bannertitle,
+        }}
       />
       <div className="main-container bg-[url('/images/bg-dindividual.webp')] bg-cover bg-center bg-no-repeat ">
         <DestinationsOverview />
