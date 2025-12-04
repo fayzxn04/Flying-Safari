@@ -2,19 +2,11 @@
 "use client";
 import { useRef, useState } from "react";
 import Button from "../common/Button";
+import { blogimage } from "@/utils/utilsConst";
 interface BlogProps {
   title: string;
   subtitle: string;
 }
-
-const image = [
-  { image: "/images/blogs-1.png" },
-  { image: "/images/blogs-2.png" },
-  { image: "/images/blogs-3.png" },
-  { image: "/images/blogs-1.png" },
-  { image: "/images/blogs-2.png" },
-  { image: "/images/blogs-3.png" },
-];
 
 export default function Blogs({ title, subtitle }: BlogProps) {
   const trackRef = useRef<HTMLDivElement | null>(null);
@@ -28,7 +20,7 @@ export default function Blogs({ title, subtitle }: BlogProps) {
 
   // Next
   const next = () => {
-    if (index < image.length - 1) {
+    if (index < blogimage.length - 1) {
       setIndex(index + 1);
       trackRef.current!.scrollTo({
         left: (index + 1) * getCardWidth(),
@@ -64,7 +56,7 @@ export default function Blogs({ title, subtitle }: BlogProps) {
       {/* Images */}
       <div ref={trackRef} className="overflow-x-auto scrollbar-hide">
         <div className="flex gap-5">
-          {image.map((item, index) => (
+          {blogimage.map((item, index) => (
             <div
               key={index}
               className="relative shrink-0 w-[330px] lg:w-[412px] group cursor-pointer"

@@ -1,27 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-
 import { useRef, useCallback } from "react";
 import Button from "@/components/common/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperInstance } from "swiper";
 import { Autoplay, EffectCoverflow, Keyboard } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-
-const IMAGES = [
-  "/images/gallery-1.png",
-  "/images/gallery-2.png",
-  "/images/gallery-3.png",
-  "/images/gallery-4.png",
-  "/images/gallery-5.png",
-  "/images/gallery-1.png",
-  "/images/gallery-2.png",
-  "/images/gallery-3.png",
-  "/images/gallery-4.png",
-  "/images/gallery-5.png",
-];
+import { IMAGES } from "@/utils/utilsConst";
 
 export default function Gallery() {
   const swiperRef = useRef<SwiperInstance | null>(null);
@@ -37,12 +23,12 @@ export default function Gallery() {
   return (
     <>
       {/* Heading */}
-      <div className="flex flex-col justify-center items-center text-center ">
+      <section className="flex flex-col justify-center items-center text-center mb-10">
         <p className="small-heading">Gallery</p>
         <h2 className="big-heading text-black lg:max-w-[55%] max-w-[80%] mt-3">
           A selection of Images of Our Beautiful Safari Experiences
         </h2>
-      </div>
+      </section>
 
       {/* Swiper */}
       <div className="w-full flex justify-center mb-12">
