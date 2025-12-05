@@ -51,7 +51,7 @@ export default function Header() {
         }`}
       >
         <div className="section-container">
-          <div className="flex items-center justify-between py-5 px-4">
+          <div className="flex items-center justify-between py-3 px-4">
             <Link href="/" className="relative z-60">
               {/* Desktop Logo */}
               <img
@@ -73,9 +73,10 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-white transition-colors duration-300 text-base  font-bold tracking-[0.08em]"
+                  className="text-white transition-all duration-300 text-base font-bold tracking-[0.08em] relative group hover:text-secondary hover:scale-105"
                 >
                   {link.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
             </nav>

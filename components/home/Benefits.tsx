@@ -9,7 +9,7 @@ export default function Benefits() {
           return (
             <div
               key={index}
-              className="flex flex-col items-center text-center max-w-xs md:max-w-none"
+              className="flex flex-col items-center text-center max-w-xs md:max-w-none transition-transform duration-300 ease-in-out hover:-translate-y-3"
             >
               <img
                 src={benefit.img}
