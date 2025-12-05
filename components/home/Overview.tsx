@@ -47,5 +47,3 @@ export default function Overview() {
     </section>
   );
 }
-
-//  className="w-[221px] h-8 lg:h-[42px] bg-primary hover:bg-primary/90 text-white px-6 lg:py-3 py-1.5 rounded transition-colors inline-block text-center font-bold tracking-[1.28px]"

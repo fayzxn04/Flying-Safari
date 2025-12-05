@@ -258,3 +258,14 @@ export const contactInfo = [
     href: "mailto:contact@flyingsafari.ae",
   },
 ];
+
+export const images = [
+  { image: "/images/gallery-11.webp" },
+  { image: "/images/gallery-22.webp" },
+  { image: "/images/gallery-33.webp" },
+  { image: "/images/gallery-44.webp" },
+  { image: "/images/gallery-55.webp" },
+  { image: "/images/gallery-66.webp" },
+  { image: "/images/gallery-77.webp" },
+  { image: "/images/gallery-88.webp" },
+];
