@@ -53,6 +53,10 @@
     @apply text-base lg:text-lg font-light text-black leading-snug transition-colors duration-300 group-hover:text-white;
   }
 
+  .button-border {
+    @apply border-[#59595966];
+  }
+
   .scrollbar-hide {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */

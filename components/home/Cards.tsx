@@ -1,14 +1,14 @@
 import Link from "next/link";
-import { destinations } from "../../utils/utilsConst";
+import { destinationsData } from "../../utils/utilsConst";
 import Image from "next/image";
 
 export default function Cards() {
   return (
-    <section className="section-container lg:py-16">
+    <section className="section-container lg:py-16 py-4">
       <div className="grid lg:grid-cols-[2fr_1fr] gap-5 md:gap-6 lg:gap-18 items-start">
         {/* Left side */}
-        <div className="grid md:grid-cols-3 grid-cols-2 gap-4 lg:order-1 order-2 max-md:px-2 py-5">
-          {destinations.map((destination) => (
+        <div className="grid md:grid-cols-3 grid-cols-2 gap-4 lg:order-1 order-2 max-md:px-2 py-5 max-md:pb-10">
+          {destinationsData.map((destination) => (
             <div
               key={destination.id}
               className="relative h-[180px] max-md:h-[140px] rounded-lg overflow-hidden group cursor-pointer"
@@ -52,7 +52,7 @@ export default function Cards() {
 
           <Link
             href="/destination"
-            className="w-[220px] bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded transition-colors inline-block text-center font-bold tracking-[1.28px]"
+            className="w-[221px] h-8 lg:h-[42px] bg-primary hover:bg-primary/90 text-white px-6 lg:py-3 py-1.5 rounded transition-colors inline-block text-center font-bold tracking-[1.28px]"
           >
             Explore Destinations
           </Link>

@@ -5,7 +5,7 @@ export interface Destination {
   featured?: boolean;
 }
 
-export const destinations: Destination[] = [
+export const destinationsData: Destination[] = [
   {
     id: 1,
     name: "SERENGETI NATIONAL PARK",
@@ -216,5 +216,45 @@ Encouraging open skies policies among African countries can lead to increased co
 This approach has the potential to make travel within Africa more affordable and attractive.
 
 Harmonizing visa regulations and reducing fees could significantly boost intracontinental tourism. Simplified visa procedures and more accessible e-visa options would encourage travelers to explore multiple destinations within Africa. Governments and tourism boards should actively promote local tourism by investing in infrastructure, supporting small and medium-sized enterprises, and fostering sustainable eco-tourism initiatives. This approach can create employment opportunities and contribute to the economic growth of host communities.`,
+  },
+];
+
+export const socialLinks = [
+  { name: "Instagram", icon: "/images/insta.png", url: "#" },
+  { name: "Facebook", icon: "/images/facebook.png", url: "#" },
+  { name: "LinkedIn", icon: "/images/linkedin.png", url: "#" },
+  { name: "Twitter", icon: "/images/x.png", url: "#" },
+];
+
+export const destinations = [
+  "Arusha",
+  "Serengeti",
+  "Kilimanjaro",
+  "Ngorongoro Crater",
+  "Lake Manyara",
+  "Tarangire",
+  "Mabele Mountains",
+];
+
+export const resources = [
+  { name: "About Us", href: "/about" },
+  { name: "Itineraries", href: "/itineraries" },
+  { name: "Destination", href: "/destination" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Blogs", href: "/blogs" },
+  { name: "Contact Us", href: "/contact" },
+];
+
+export const contactInfo = [
+  { type: "tel", value: "+255 76894 8945", href: "tel:+255768948945" },
+  {
+    type: "email",
+    value: "info@flyingsafari.ae",
+    href: "mailto:info@flyingsafari.ae",
+  },
+  {
+    type: "email",
+    value: "contact@flyingsafari.ae",
+    href: "mailto:contact@flyingsafari.ae",
   },
 ];

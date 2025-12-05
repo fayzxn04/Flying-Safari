@@ -3,46 +3,12 @@
 import React, { useState } from "react";
 
 import Link from "next/link";
-
-const socialLinks = [
-  { name: "Instagram", icon: "/images/insta.png", url: "#" },
-  { name: "Facebook", icon: "/images/facebook.png", url: "#" },
-  { name: "LinkedIn", icon: "/images/linkedin.png", url: "#" },
-  { name: "Twitter", icon: "/images/x.png", url: "#" },
-];
-
-const destinations = [
-  "Arusha",
-  "Serengeti",
-  "Kilimanjaro",
-  "Ngorongoro Crater",
-  "Lake Manyara",
-  "Tarangire",
-  "Mabele Mountains",
-];
-
-const resources = [
-  { name: "About Us", href: "/about" },
-  { name: "Itineraries", href: "/itineraries" },
-  { name: "Destination", href: "/destination" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "Blogs", href: "/blogs" },
-  { name: "Contact Us", href: "/contact" },
-];
-
-const contactInfo = [
-  { type: "tel", value: "+255 76894 8945", href: "tel:+255768948945" },
-  {
-    type: "email",
-    value: "info@flyingsafari.ae",
-    href: "mailto:info@flyingsafari.ae",
-  },
-  {
-    type: "email",
-    value: "contact@flyingsafari.ae",
-    href: "mailto:contact@flyingsafari.ae",
-  },
-];
+import {
+  contactInfo,
+  destinations,
+  resources,
+  socialLinks,
+} from "@/utils/utilsConst";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -54,41 +20,43 @@ export default function Footer() {
   };
   return (
     <>
-      <div className="max-width">
-        <div className="bg-[url('/images/footer-logo.webp')] bg-cover bg-center bg-no-repeat h-[550px] mt-25 relative">
-          <h2 className="lg:text-[188px] text-5xl uppercase text-white lg:tracking-[7.5px] tracking-wide  absolute lg:-top-10 -top-2 max-md:mt-10 md:left-1/2 md:-translate-x-1/2 max-md:px-auto text-center w-full">
-            Flying Safari
-          </h2>
+      <div className="bg-[url('/images/footer-logo.webp')] bg-cover bg-center bg-no-repeat h-[550px] mt-10 lg:mt-20 relative">
+        {/* White gradient overlay for text fade effect */}
+        <div className="absolute top-0 left-0 w-full h-60 bg-linear-to-b from-white to-transparent z-10 pointer-events-none"></div>
 
-          {/* Subscribe Section */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center px-4">
-              <p className="text-white text-lg md:text-xl mb-2">
-                Subscribe for latest update & offers
-              </p>
-              <form
-                onSubmit={handleSubscribe}
-                className="flex sm:flex-row items-center justify-center gap-4 border  border-white  bg:#FFF80 backdrop-blur-[10.9px] rounded-full"
+        <h2 className="lg:text-[188px] text-5xl md:text-8xl uppercase text-white lg:tracking-[7.5px] tracking-wide absolute lg:-top-6 -top-6 max-md:mt-10 md:left-1/2 md:-translate-x-1/2 max-md:px-auto text-center w-full">
+          Flying Safari
+        </h2>
+
+        {/* Subscribe Section */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center px-4">
+            <p className="text-white text-lg md:text-xl mb-2">
+              Subscribe for latest update & offers
+            </p>
+            <form
+              onSubmit={handleSubscribe}
+              className="flex sm:flex-row items-center justify-center gap-4 border border-white backdrop-blur-[10.9px] rounded-full"
+            >
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your Email Address"
+                required
+                className="px-6 py-2 rounded-full w-full sm:w-80 text-white focus:outline-none font-bold placeholder:text-white tracking-[0.28px] md:tracking-[1.28px]"
+              />
+              <button
+                type="submit"
+                className="md:px-8 md:py-3 px-4 py-2 bg-primary text-white rounded-full hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap"
               >
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your Email Address"
-                  required
-                  className="px-6 py-2 rounded-full w-full sm:w-80 text-white focus:outline-none "
-                />
-                <button
-                  type="submit"
-                  className="md:px-8 md:py-3 px-4 py-2 bg-primary text-white rounded-full hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap"
-                >
-                  Subscribe
-                </button>
-              </form>
-            </div>
+                Subscribe
+              </button>
+            </form>
           </div>
         </div>
       </div>
+
       <footer className="bg-[url('/images/footer-blogo.webp')] bg-cover bg-center bg-no-repeat py-8 px-6 lg:px-20">
         <div className="section-container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 lg:gap-16">
@@ -97,7 +65,7 @@ export default function Footer() {
               <img
                 src="/images/logo.png"
                 alt="Flying Safari Logo"
-                className="md:w-56 w-34 h-auto cursor-pointer"
+                className="md:w-56 w-32 h-auto cursor-pointer"
               />
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
@@ -175,18 +143,14 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center md:items-end py-4 gap-3 md:pb-7 md:mt-10 tracking-wider max-md:mt-7">
-            <div className="order-1 md:order-3">
-              <p className="text-sm md:text-base font-light text-white text-center md:text-left">
-                Privacy Policy | Terms & conditions
-              </p>
-            </div>
+            <p className="order-1 md:order-3 text-sm md:text-base font-light text-white text-center md:text-left">
+              Privacy Policy | Terms & conditions
+            </p>
 
-            <div className="order-2 md:order-1">
-              <p className="text-sm md:text-base font-light text-white text-center md:text-left">
-                @ {new Date().getFullYear()} Flying Safari Limited. All rights
-                reserved.
-              </p>
-            </div>
+            <p className="order-2 md:order-1 text-sm md:text-base font-light text-white text-center md:text-left">
+              @ {new Date().getFullYear()} Flying Safari Limited. All rights
+              reserved.
+            </p>
 
             <p className="order-3 md:order-2 text-sm md:text-base font-light text-white text-center md:text-left">
               Designed & Developed by{" "}

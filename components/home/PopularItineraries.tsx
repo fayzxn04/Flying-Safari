@@ -137,7 +137,7 @@ export default function PopularItineraries({
                   </div>
                 </div>
 
-                <div className="lg:p-5 p-6">
+                <div className="lg:p-5 px-6 py-4">
                   <div className="flex items-center justify-center gap-2 text-sm text-dark-grey mb-4 font-normal">
                     <span>{itinerary.nights} Nights</span>
                     <span className="size-1 bg-primary rounded-full">•</span>
@@ -154,7 +154,7 @@ export default function PopularItineraries({
                     ))}
                   </div>
 
-                  <button className="lg:w-48 w-43 border border-gray-300 lg:py-3 px-6 py-2 rounded text-dark-grey mx-auto block lg:text-base text-sm cursor-pointer font-bold tracking-[1.28px]">
+                  <button className="lg:w-48 w-44 border border-[#59595966] lg:py-3 px-6 max-md:px-3 py-2 rounded text-dark-grey mx-auto block lg:text-base text-sm cursor-pointer font-bold tracking-[1.28px]">
                     VIEW ITINERARY
                   </button>
                 </div>

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Overview() {
   return (
-    <section className="bg-[url('/images/overview-bg.webp')] bg-center bg-no-repeat px-3 lg:px-20 py-4 max-width lg:py-15 flex flex-col justify-center items-center">
+    <section className="bg-[url('/images/overview-bg.webp')] bg-center bg-no-repeat px-3 lg:px-20 py-4 max-width lg:py-15 flex flex-col justify-center items-center max-md:pb-24">
       <div className="flex flex-col justify-center text-center items-center md:mb-6">
         <p className="text-lg md:text-2xl lg:text-[28px] lg:max-w-[65%] text-secondary leading-6 md:leading-8 lg:leading-10 font-[550]">
           In Tanzania, the rhythm of the wild is untouched by time. From the
@@ -40,10 +40,12 @@ export default function Overview() {
 
       <Link
         href="/about"
-        className="w-[140px] bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded transition-colors mt-4 md:text-base text-sm cursor-pointer inline-block text-center"
+        className="w-[120px] h-8 lg:h-[42px] bg-primary hover:bg-primary/90 text-white px-6  lg:py-3 py-1.5 rounded transition-colors max-lg:mt-4 md:text-base text-sm cursor-pointer inline-block text-center"
       >
         About us
       </Link>
     </section>
   );
 }
+
+//  className="w-[221px] h-8 lg:h-[42px] bg-primary hover:bg-primary/90 text-white px-6 lg:py-3 py-1.5 rounded transition-colors inline-block text-center font-bold tracking-[1.28px]"
